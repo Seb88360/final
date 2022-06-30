@@ -12,7 +12,6 @@
 
 <header>  
     <a href="index.php"><h1 id="h1Header">Blog-Enterprise</h1></a>
-    
 </header>
 
 <body>

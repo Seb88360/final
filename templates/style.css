@@ -70,12 +70,35 @@ h3{
 #blocArticleArticle{
     background-color: white;
     margin: auto;
+    font-size: 20px;
     border-radius: 8px;
     width: 90%;
     margin-bottom: 30px;
-    height: 600px;
     padding: 20px 20px;
     box-shadow: 2px 2px 20px rgb(220, 220, 220);
+}
+#blocArticleComments{
+    background-color: white;
+    margin: auto;
+    border-radius: 8px;
+    width: 95%;
+    margin-bottom: 30px;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+}
+#button{
+    background-color: white;
+    color: purple;
+    text-decoration: none;
+    box-shadow: 3px 3px 30px rgb(220, 220, 220);
+    width: 20%;
+    border-radius: 8px;
+    padding: 10px 10px;
+}
+#button:hover{
+    background-color: purple;
+    color: white;
+    box-shadow: 3px 3px 30px rgb(220, 220, 220);
 }
 
 /* FORMULAIRE /ARTICLE *****************************************************************************/

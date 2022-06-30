@@ -6,19 +6,22 @@
     <?= $article['content'] ?>
 </div>
 
-<?php if (count($commentaires) === 0) : ?>
-    <h2 class='comm'>Il n'y a pas encore de commentaires pour cet article ... Soyez le premier !</h2>
-<?php else : ?>
-    <h2 class='comm'>Il y a déjà <?= count($commentaires) ?> réaction(s) : </h2>
-    <?php foreach ($commentaires as $commentaire) : ?>
-        <h3><?= $commentaire['author'] ?></h3>
-        <small>Le <?= $commentaire['created_at'] ?></small>
-        <blockquote>
-            <em><?= $commentaire['content'] ?></em>
-        </blockquote>
-        <a href="index.php?controller=comment&task=delete?id=<?= $commentaire['id'] ?>" onclick="return window.confirm(`Êtes vous sûr de vouloir supprimer ce commentaire ?!`)">Supprimer</a>
-    <?php endforeach ?>
-<?php endif ?>
+<div id="blocArticleComments">
+    <?php if (count($commentaires) === 0) : ?>
+        <h2 class='comm'>Il n'y a pas encore de commentaires pour cet article ... Soyez le premier !</h2>
+    <?php else : ?>
+        <h2 class='comm'>Il y a déjà <?= count($commentaires) ?> réaction(s) : </h2>
+        <?php foreach ($commentaires as $commentaire) : ?>
+            <h3><?= $commentaire['author'] ?></h3>
+            <small>Le <?= $commentaire['created_at'] ?></small>
+            <blockquote>
+                <em><?= $commentaire['content'] ?></em>
+            </blockquote>
+            <a id="button" href="index.php?controller=comment&task=delete?id=<?= $commentaire['id'] ?>" onclick="return window.confirm(`Êtes vous sûr de vouloir supprimer ce commentaire ?!`)">Supprimer</a>
+        <?php endforeach ?>
+    <?php endif ?>
+</div>
+
 
 <form action="index.php?controller=comment&task=insert" method="POST">
     <h3>Vous voulez réagir ? N'hésitez pas!</h3>
