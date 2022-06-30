@@ -7,8 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="templates/style.css">
-    <title>Mon superbe blog - <?= $pageTitle ?></title>
+    <title>Blog Entreprise - <?= $pageTitle ?></title>
 </head>
+
+<header>  
+    <a href="index.php"><h1 id="h1Header">Blog-Enterprise</h1></a>
+    
+</header>
 
 <body>
     <?= $pageContent ?>
