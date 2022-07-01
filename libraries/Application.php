@@ -1,6 +1,5 @@
 <?php
 
-
 class Application{
     public static function process(){
         $controllerName = "Article"; // j'appelle controller Article
